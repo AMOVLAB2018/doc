@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>第一章 - AMOVLAB</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u7b2c\u4e00\u7ae0";
+    var mkdocs_page_input_path = "about.md";
+    var mkdocs_page_url = "/about/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> AMOVLAB</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">第一章</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#mavlink">基于Mavlink的上位机地面站开发教程</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_2">#第一节 开发环境搭建</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#1">1 预编译 （源码尽量放到非中文目录下面）</a></li>
+    
+
+    <li class="toctree-l2"><a href="#2">2 初次编译</a></li>
+    
+
+    <li class="toctree-l2"><a href="#3-speechspeech">3 删除这个speech引用，重新引用这个speech包(每个人的环境不一样，可能是其他引用包有问题)</a></li>
+    
+
+    <li class="toctree-l2"><a href="#4-windows-10-sdknet-framework-462">4 编译成功  初次编译成功的效果，因为每个人的电脑开发环境不同，编译的结果也不同，但是首先保证windows 10 SDK,.NET Framework 4.6.2这些组件一定要在你的编译器里面存在。</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../MP%E7%9A%84%E6%A1%86%E6%9E%B6%E4%B8%8E%E4%BF%AE%E6%94%B9/">第二章</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">AMOVLAB</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>第一章</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="mavlink">基于Mavlink的上位机地面站开发教程</h1>
+<h2 id="_1"></h2>
+<h6 id="_2">#第一节 开发环境搭建</h6>
+<p>桌面上位机的开发微软的C#平台，是最容易上手的，C#网上资料很多，各种优秀控件直接用。我在最开始接触飞控开发，就是通过C#来做的地面站。然后慢慢入手的飞控开发。最好有些C语音的基础，然后C#的基础。C#比较简单，网上的视频教程也比较多。我们的这个课程不涉及C#基础开发。如果没有C#基础请看如下的视频教程，花2周时间好好学学。</p>
+<ul>
+<li>我们推荐C#基础课程如下：
+C#+ winform
+推荐课程
+https://chuanke.baidu.com/v4697535-147316-506688.html
+http://study.163.com/course/introduction/1003521039.htm</li>
+</ul>
+<p>网易云课堂有很多免费的C#课程，有语言基础的人，2周就可以学会。有C++语言基础的的同学。可以直接观看教程.</p>
+<ul>
+<li>代码下载地址
+ https://github.com/diydrones/MissionPlanner</li>
+<li>操作系统要求
+  1.3.50(包含1.3.50)之后版本系统必须升级到win10
+  1.3.50之前也就是1.3.4X,Win7就可以了
+附件里的1.3.50修改版 去掉了对.net standard 的支持，只保留了对.net Framwork支持</li>
+<li>开发IDE
+  Visual Studio Community 2017（win7先安装.net 4.6）+SSCERuntime
+<img alt="" src="https://i.imgur.com/anS2PCj.png" />
+<img alt="" src="https://i.imgur.com/jQFViwJ.png" />
+<img alt="" src="https://i.imgur.com/WXIlZoB.png" /></li>
+</ul>
+<p>静静的等待安装完成，因为比较大，安装的时间也比较久。尽量采用我们的这个安装环境和下载对应的组件，要不然只用我们的源码去在你个人电脑上编译，会有各种各样的问题。</p>
+<ul>
+<li>下载源码
+我们采用1.49的版本进行编译  https://github.com/ArduPilot/MissionPlanner/releases/tag/MissionPlanner1.3.49
+MP的作者在1.50以后的代码不支持win 7，所以我们考虑到编译的便捷和支持更广泛，我们考虑采用1.49为版本做为讲解和开发。并且作者是打算
+让MP支持ubuntu,所以编译起来也会有很多问题。</li>
+</ul>
+<h1 id="_3"></h1>
+<h2 id="1">1 预编译 （源码尽量放到非中文目录下面）</h2>
+<p><img alt="" src="https://i.imgur.com/rQEfvV4.png" /></p>
+<h2 id="2">2 初次编译</h2>
+<p><img alt="" src="https://i.imgur.com/wZxWywd.png" />
+初次编译会有一些各种各样的引用失败，可以尝试删除这个引用，再度引用一遍就OK！
+<img alt="" src="https://i.imgur.com/b34QUFL.png" />
+<img alt="" src="https://i.imgur.com/L5Ffxal.jpg" /></p>
+<h2 id="3-speechspeech">3 删除这个speech引用，重新引用这个speech包(每个人的环境不一样，可能是其他引用包有问题)</h2>
+<p><img alt="" src="https://i.imgur.com/OLokwv9.jpg" /></p>
+<h2 id="4-windows-10-sdknet-framework-462">4 编译成功  初次编译成功的效果，因为每个人的电脑开发环境不同，编译的结果也不同，但是首先保证windows 10 SDK,.NET Framework 4.6.2这些组件一定要在你的编译器里面存在。</h2>
+<p><img alt="" src="https://i.imgur.com/BIrFsg4.jpg" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../MP%E7%9A%84%E6%A1%86%E6%9E%B6%E4%B8%8E%E4%BF%AE%E6%94%B9/" class="btn btn-neutral float-right" title="第二章">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../MP%E7%9A%84%E6%A1%86%E6%9E%B6%E4%B8%8E%E4%BF%AE%E6%94%B9/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

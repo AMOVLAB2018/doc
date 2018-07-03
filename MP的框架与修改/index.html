@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>第二章 - AMOVLAB</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u7b2c\u4e8c\u7ae0";
+    var mkdocs_page_input_path = "MP\u7684\u6846\u67b6\u4e0e\u4fee\u6539.md";
+    var mkdocs_page_url = "/MP\u7684\u6846\u67b6\u4e0e\u4fee\u6539/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> AMOVLAB</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">第一章</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">第二章</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#mp">第二章：MP的框架与修改</a></li>
+    
+
+    <li class="toctree-l2"><a href="#mpmp">MP的程序框架：本次课程的目标是裁剪一个比较简洁的MP地面站和了解高级功能</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#mp_1">MP高级功能</a></li>
+        
+            <li><a class="toctree-l3" href="#_1">主界面基本修改</a></li>
+        
+            <li><a class="toctree-l3" href="#_2">代码运行流程及其主要类</a></li>
+        
+            <li><a class="toctree-l3" href="#_3">定制修改步骤</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">AMOVLAB</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>第二章</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="mp">第二章：MP的框架与修改</h3>
+<h2 id="mpmp">MP的程序框架：本次课程的目标是裁剪一个比较简洁的MP地面站和了解高级功能</h2>
+<h3 id="mp_1">MP高级功能</h3>
+<p><img alt="" src="https://i.imgur.com/kgMyM4B.png" />
+高级功能，完成图传，Follow ME功能，地面站take off，在temp.cs窗体里面。要实现VLC的视频直播功能要安装vlc-3.0.2-win64这个软件。</p>
+<h3 id="_1">主界面基本修改</h3>
+<p><img alt="" src="https://i.imgur.com/tWt9fVs.jpg" />
+在missionplanner项目下双击MainV2.cs这个主窗体类，可以看到主窗体设计选项。</p>
+<h4 id="1">1 菜单名称背景修改</h4>
+<p><img alt="" src="https://i.imgur.com/tA69kSi.png" /></p>
+<h4 id="2">2 主窗体语言修改</h4>
+<p>这个设计界面，我们可以修改主窗体的一些菜单名字。
+<img alt="" src="https://i.imgur.com/96NCq6w.jpg" /></p>
+<p>修改这个窗体控件我们可以修改窗体语言，窗体图标。点击具体的窗体上面的控件，我们还可以修改对应控件的名称。</p>
+<h4 id="3">3 主要窗体目录位置</h4>
+<p><img alt="" src="https://i.imgur.com/RCPQWZJ.png" /></p>
+<p>界面的几个主要的窗体的项目目录</p>
+<h4 id="4">4菜单栏删除</h4>
+<p><img alt="" src="https://i.imgur.com/oEGLLS0.png" /></p>
+<h4 id="5">5入口函数</h4>
+<p><img alt="" src="https://i.imgur.com/0sQBFHg.png" /></p>
+<h4 id="6">6参数配置函数</h4>
+<p><img alt="" src="https://i.imgur.com/LUGuiPa.png" /></p>
+<h3 id="_2">代码运行流程及其主要类</h3>
+<ul>
+<li>入口函数Program(完成基本控件的初始化) ---&gt;</li>
+<li>创建Splash启动窗体并且启动 ---&gt; </li>
+<li>实例化MainV2主窗体(public MainV2()这个构造函数，初始化类和控件，实例化FlightData()和FlightPlanner()类。 ---&gt;</li>
+<li>创建 MainSwitcher窗体切换类 ---&gt;</li>
+<li>窗体显示，通过 MainSwitcher，ShowScreen的事件完成窗体切换操作。</li>
+</ul>
+<h3 id="_3">定制修改步骤</h3>
+<h4 id="1_1">1 主题环境修改</h4>
+<p>在MissionPlanner-MissionPlanner1.3.49\Utilities\ThemeManager.cs 这个类里面是主题颜色修改的类，我们可以通过这个类的修改，把MP的主题背景修改了，达到更换颜色风格的目的。
+<img alt="" src="https://i.imgur.com/p0tKH4M.png" />
+``</p>
+<pre><code>        BGColor = Color.FromArgb(0x26, 0x27, 0x28);                     // This changes the colour of the main menu background
+        ControlBGColor = Color.FromArgb(0x43, 0x44, 0x45);              // This changes the colour of the sub menu backgrounds
+        TextColor = Color.White;                                        // This changes the colour of text
+        BGColorTextBox = Color.FromArgb(0x43, 0x44, 0x45);              // This changes the colour of the background of textboxes
+
+        ButtonTextColor = Color.FromArgb(64, 87, 4);                    // This changes the colour of button text
+
+        ButBG = Color.FromArgb(148, 193, 31);                           // This changes the colour of button backgrounds (Top)
+
+        ButBGBot = Color.FromArgb(205, 226, 150);                       // This changes the colour of button backgrounds (Bot)
+
+        ProgressBarColorTop = Color.FromArgb(102, 139, 26);             // These three variables change the colours of progress bars
+
+        ProgressBarColorBot = Color.FromArgb(124, 164, 40);
+
+        ProgressBarOutlineColor = Color.FromArgb(150, 174, 112);
+
+        BannerColor1 = Color.FromArgb(0x40, 0x57, 0x04);                // These two variables change the colours of banners such as "planner" umder configuration
+
+        BannerColor2 = Color.FromArgb(0x94, 0xC1, 0x1F);
+
+        ColorNotEnabled = Color.FromArgb(150, 43, 58, 3);               // This changes the background color of buttons when not enabled
+
+        ColorMouseOver = Color.FromArgb(73, 43, 58, 3);                 // This changes the background color of buttons when the mouse is hovering over a button
+
+        ColorMouseDown = Color.FromArgb(73, 43, 58, 3);                 // This changes the background color of buttons when the mouse is clicked down on a button
+
+        CurrentPPMBackground = Color.Green;                             // This changes the background colour of the current PPM setting in the flight modes tab
+
+        ZedGraphChartFill = Color.FromArgb(0x1F, 0x1F, 0x20);           // These three variables change the fill colours of Zed Graphs
+
+        ZedGraphPaneFill = Color.FromArgb(0x37, 0x37, 0x38);
+
+        ZedGraphLegendFill = Color.FromArgb(0x85, 0x84, 0x83);
+
+        RTBForeColor = Color.WhiteSmoke;                                // This changes the colour of text in rich text boxes
+
+        BSVButtonAreaBGColor = Color.Black;                             // This changes the colour of a backstageview button area
+
+        UnselectedTextColour = Color.WhiteSmoke;                        // This changes the colour of unselected text in a BSV button
+
+        HorizontalPBValueColor = Color.FromArgb(148, 193, 31);          // This changes the colour of the horizontal progressbar
+</code></pre>
+<p>``
+主要的界面颜色配置函数</p>
+<h4 id="2_1">2 菜单精简(去掉冗余菜单按键)</h4>
+<p>视频教程里面有详细的讲述，怎么删除冗余菜单。注意观察编译报错，把对应的报错注释掉即可。</p>
+<h4 id="3_1">3 功能按键添加(新建按钮实现解锁，前后左右功能键的实现)，在无人车上做演示效果</h4>
+<p>这个是涉及地面站控制飞控系统，要注意的是Ardupilot的控制系统中，遥控器控制和地面站数传链路控制，不能同时存在。一旦启动了地面站控制，遥控器链路是被直接切断的。同一时刻，要不然地面站控制，要不然遥控器控制。</p>
+<ul>
+<li>HUD界面修改添加自定义按键(注意VS的BUG)</li>
+<li>MAVLINK协议的指令发送的初步理解</li>
+<li>控制系统的参数配置，来适应于地面站控制控制系统的要求</li>
+</ul>
+<p><img alt="" src="https://i.imgur.com/YXhsmDi.png" />
+在飞行数据子窗体添加功能按钮，分别对应遥控器的横滚和油门(试用于无人车)，四轴无人机的功能类似，可以根据意义来修改。
+<img alt="" src="https://i.imgur.com/IZEkno2.png" />
+在数传链路控制飞机的情况下，去掉故障保护。</p>
+<h4 id="4-4gwifi">4 4G/Wifi/图像传输的实现</h4>
+<h4 id="5-logo">5 LOGO修改发布修改完成的地面站</h4>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../about/" class="btn btn-neutral" title="第一章"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../about/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
